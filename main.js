@@ -1,24 +1,26 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+import './layout/introduce.js'
+import './layout/productcollection.js'
+import './layout/news.js'
+import './layout/shops.js'
+import './layout/contact.js'
+import './layout/user.js'
+import './layout/logre.js'
+import './layout/checkout.js'
+import { header, footer } from './component/header.js'
 
-setupCounter(document.querySelector('#counter'))
+import './assets/styles/mainstyle.scss'
+
+const app = document.getElementById('app')
+app.appendChild(document.createElement("header"))
+app.appendChild(document.createElement("main"))
+app.appendChild(document.createElement("footer"))
+
+let headerComponent = document.getElementsByTagName('header')[0]
+let mainComponent = document.getElementsByTagName('main')[0]
+let footerComponent = document.getElementsByTagName('footer')[0]
+
+header(headerComponent)
+footer(footerComponent)
+
+
