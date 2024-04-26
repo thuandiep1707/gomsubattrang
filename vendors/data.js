@@ -3,7 +3,7 @@ import search from '../assets/img/search-icon.png'
 import user from '../assets/img/user-icon.png'
 import heart from '../assets/img/heart-icon.png'
 import cart from '../assets/img/cart-icon.png'
-// import search from '../assets/img/'
+import nav3Img from "../assets/img/nav3-img.png"
 
 
-export {logo, search, user, heart, cart}
+export { logo, search, user, heart, cart, nav3Img }
