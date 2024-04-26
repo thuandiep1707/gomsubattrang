@@ -1,7 +1,9 @@
 
-import { logo, search, user, heart, cart, nav3Img } from '../vendors/data.js'
+import { logo, search, user, heart, cart, nav3Img, searchList, xIcon } from '../vendors/data.js'
 import { getCollection } from '../vendors/services.js'
-import { routeNav1, routeNav3 } from '../vendors/routes.js'
+import { routeNav } from '../vendors/routes.js'
+
+import '../assets/styles/header.scss'
 
 function renderHeader(){
     
@@ -28,7 +30,7 @@ function renderHeader(){
                     <li class="cart"> <img src="${cart}" alt="gomsubattrang"> </li>
                 </ul>
             </div>`
-        routeNav1()
+        routeNav(document.querySelectorAll('.nav1 li'))
     }
 
     function removeAccents(str) {
@@ -68,7 +70,7 @@ function renderHeader(){
                  </div>
                </div>
              `
-             routeNav3()
+             routeNav(document.querySelectorAll('.nav3_list li'))
              headerComponent.querySelector('.products').style.color='#cb7104'
              checkMouseOut()
            }
@@ -85,15 +87,60 @@ function renderHeader(){
                headerComponent.querySelector('.products').style.color='black'
              }, 500);
              checkMouseOver()
-             routeNav1()
+             routeNav(document.querySelectorAll('.nav1 li'))
            }
          }, false)
         }
         checkMouseOver()
     }
 
+    function renderSearchComponent(){
+      let headerAround = headerComponent.querySelector('.header-around')
+      function innerSearchListItems(data){
+        let searchListItem = ''  
+        for (let i in data) {
+          searchListItem += `
+            <li data="${removeAccents(data[i].name)}">
+              <div class="item-img">
+                <img src="${data[i].img}" alt="gomsubattrang" >
+                <div class="item-des">
+                <p class="name">${data[i].name}</p>
+                <p class="price">${data[i].price}</p>
+                </div>
+              </div>
+            </li>`
+        }
+        
+        return searchListItem
+      }
+
+      headerAround.innerHTML += `
+      <div class="search-component">
+        <div class= "search">
+          <div class="x-icon" >
+            <img src="${xIcon}" alt="gomsubattrang">
+          </div>
+          <form class="search_form">
+            <input type="text" id="input-search" name="input-search">
+            <label for="input-search">
+              <img src="${search}" alt="gomsubattrang">
+            </label>
+          </form>
+          <div class="search_list">
+            <h3>Sản phẩm được tìm nhiều nhất</h3>
+            <ul class="list-items">
+              ${innerSearchListItems(searchList)}
+            </ul>
+          </div>
+        </div>
+      </div>
+      `
+      routeNav(document.querySelectorAll('.list-items li'))
+    }
+
     innerHeader()
     innerAndCheckEventNav3()
+    renderSearchComponent()
 }
 
 export default renderHeader;
