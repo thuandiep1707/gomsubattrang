@@ -40,4 +40,57 @@ const searchList = [
     }
 ]
 
-export { logo, search, user, heart, cart, nav3Img, searchList, xIcon }
+const collection = {
+  "col1": {
+    "name": "Phòng Ăn",
+    "list": [
+      "Tô - Chén - Dĩa",
+      "Thố - Khay",
+      "Ca - Ly"
+    ]
+  },
+  "col2": {
+    "name": "Trà - Cà Phê",
+    "list": [
+      "Bộ Trà",
+      "Cà Phê",
+      "Phụ kiện trà - cà phê",
+      "Phụ kiện cà phê"
+    ]
+  },
+  "col3": {
+    "name": "Nồi sứ dưỡng sinh",
+    "list": [
+      "Luna",
+      "Vesta",
+      "Ấm - Chảo"
+    ]
+  },
+  "col4": {
+    "name": "Sứ dưỡng sinh",
+    "list": [
+      "Ly sứ dưỡng sinh",
+      "Hộp sứ dưỡng sinh",
+      "Đũa sứ"
+    ]
+  },
+  "col5": {
+    "name": "Phụ kiện bàn ăn",
+    "list": [
+      "Muỗng - Đũa",
+      "Túi vải canvas",
+      "Gác đũa sứ",
+      "Phụ kiện khác"
+    ]
+  },
+  "col6": {
+    "name": "Sứ nghệ thuật",
+    "list": [
+      "Tượng Linh Vật",
+      "Tượng trang trí",
+      "Bình Hoa"
+    ]
+  }
+}
+
+export { logo, search, user, heart, cart, nav3Img, xIcon, searchList, collection }
