@@ -1,8 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './assets/styles/index.scss'
+import './assets/styles/index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-  </React.StrictMode>,
+  <h1 class="text-s14">
+    Hello world!
+  </h1>,
 )
