@@ -1,0 +1,40 @@
+.selection-icon{
+    display: block;
+    width: 10px;
+    height: 7px;
+    // background-color: black;
+    border-bottom: 7px black solid;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+.hover-text-brown:hover{
+    .link{
+        transition: all .2s linear;
+        color: #ca6f04;
+    }
+    .selection-icon{
+        transition: all .2s linear;
+        transform: rotate(180deg);
+        border-bottom: 7px #ca6f04 solid;
+    }
+}
+.nav-col-before::before{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 99%;
+    left: 480px;
+    width: 120px;
+    height: 40px;
+}
+.nav-colection{
+    top: 100px;
+    opacity: 0;
+    transition: all .2s linear;
+}
+.animationState:hover{
+    .nav-colection{
+        top: 83px;
+        opacity: 1;
+    }
+}
