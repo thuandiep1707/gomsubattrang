@@ -3,6 +3,9 @@ import userIcon from '../assets/img/user-icon.png'
 import hearthIcon from '../assets/img/heart-icon.png'
 import cartIcon from '../assets/img/cart-icon.png'
 
+import slide1 from '../assets/img/slide-1.png'
+import slide2 from '../assets/img/slide-2.png'
+
 
 const navUserIcon = [searchIcon, userIcon, hearthIcon, cartIcon]
 
@@ -59,4 +62,15 @@ const navColectionList = [
     }
 ]
 
-export { navUserIcon, navColectionList }
+const homeSlideData = [
+    {
+        title: 'Gốm Sứ Cao Cấp',
+        img: slide1
+    },
+    {
+        title: 'Ngược dòng lịch sử',
+        img: slide2
+    }
+]
+
+export { navUserIcon, navColectionList, homeSlideData }

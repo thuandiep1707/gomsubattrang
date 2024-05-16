@@ -9,7 +9,6 @@ import logo from '../assets/img/logo.png'
 
 const Header = ()=>{
     const [stateNavCol, setStateNavCol] = useState(false)
-    console.log(stateNavCol)
 
     const hideNavCol = ()=>{
         if (!stateNavCol) return
